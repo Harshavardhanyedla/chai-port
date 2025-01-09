@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS for the page */
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        .bg-gradient-to-r {
+            background-image: linear-gradient(to right, #3b82f6, #8b5cf6);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navigation Menu -->
+    <div class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-sm z-50 shadow-sm">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <a href="#" class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                    CS
+                </a>
+                <button onclick="toggleMenu()" class="md:hidden">
+                    <span id="menu-icon">☰</span>
+                </button>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-blue-600 transition-colors">Home</a>
+                    <a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors">About</a>
+                    <a href="#projects" class="text-gray-600 hover:text-blue-600 transition-colors">Projects</a>
+                    <a href="#skills" class="text-gray-600 hover:text-blue-600 transition-colors">Skills</a>
+                    <a href="#experience" class="text-gray-600 hover:text-blue-600 transition-colors">Experience</a>
+                    <a href="#contact" class="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden absolute w-full bg-white hidden">
+            <div class="px-4 py-2 space-y-2">
+                <a href="#home" class="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors" onclick="toggleMenu()">Home</a>
+                <a href="#about" class="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors" onclick="toggleMenu()">About</a>
+                <a href="#projects" class="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors" onclick="toggleMenu()">Projects</a>
+                <a href="#skills" class="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors" onclick="toggleMenu()">Skills</a>
+                <a href="#experience" class="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors" onclick="toggleMenu()">Experience</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors" onclick="toggleMenu()">Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 text-center">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                Hello, I'm Charitha Sri
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-600 mb-8">Aspiring AI & ML Engineer | Data Analyst | Problem Solver</p>
+            <div class="flex justify-center gap-4">
+                <a href="#projects" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">View Projects</a>
+                <a href="#contact" class="px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
+            <div class="max-w-3xl mx-auto">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <p class="text-gray-600 mb-6">
+                        I am pursuing a BE in Artificial Intelligence & Machine Learning at CBIT with a CGPA of 9.11.
+                        I specialize in Python, R, SQL, and data science tools like Power BI and Tableau.
+                        My goal is to innovate and build solutions that drive efficiency and impact.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="text-center p-4 bg-blue-50 rounded-lg">
+                            <h3 class="font-bold text-blue-600">Education</h3>
+                            <p>BE in AI & ML</p>
+                            <p>CBIT</p>
+                        </div>
+                        <div class="text-center p-4 bg-purple-50 rounded-lg">
+                            <h3 class="font-bold text-purple-600">CGPA</h3>
+                            <p class="text-2xl font-bold">9.11</p>
+                        </div>
+                        <div class="text-center p-4 bg-green-50 rounded-lg">
+                            <h3 class="font-bold text-green-600">Experience</h3>
+                            <p>Data Analyst Intern</p>
+                            <p>AICTE Idea Labs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Project Cards -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold">Scribble Solver</h3>
+                    <p class="text-gray-600 mb-4">OCR-based handwritten text recognition system</p>
+                    <p><strong>Tools:</strong> Machine Learning, Digital Image Processing, Python</p>
+                    <p><strong>Outcome:</strong> Enhanced accuracy for digitizing handwritten documents</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold">Email Spam Detection</h3>
+                    <p class="text-gray-600 mb-4">Machine learning-based system to filter spam emails</p>
+                    <p><strong>Tools:</strong> Python, NLP</p>
+                    <p><strong>Outcome:</strong> Improved email security and user experience</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold">Analysis Of Suicide Cases in India (2001-2012)</h3>
+                    <p class="text-gray-600 mb-4">Data analysis and visualization of suicide cases in India using R</p>
+                    <p><strong>Tools:</strong> R, Data Visualization</p>
+                    <p><strong>Outcome:</strong> Gained insights into trends and patterns of suicide cases over time</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold">Airport Authority Data Visualization</h3>
+                    <p class="text-gray-600 mb-4">Data analysis and visualization for Airport Authority data using Power BI, SQL, and Excel</p>
+                    <p><strong>Tools:</strong> Power BI, SQL, Excel</p>
+                    <p><strong>Outcome:</strong> Provided data-driven insights for operational improvements</p>
+                </div>
+            </div>
+            <!-- Add more project cards here -->
+        </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold">Languages</h3>
+                    <p>Python, R, SQL, C</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold">Data Science Tools</h3>
+                    <p>Power BI, Tableau, NumPy, Pandas, Scikit-Learn</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold">Web Development</h3>
+                    <p>HTML, CSS, JavaScript</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold">Coursework</h3>
+                    <p>DBMS, OOPs, AI, NLP, ML, DSA, OS, DCCN, Quantum Computing,Git</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Certifications</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Certification Cards -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold">Supervised Machine Learning: Regression and Classification</h3>
+                    <p class="text-gray-600 mb-4">Issued by Coursera</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold">Data Science Foundation Certification</h3>
+                    <p class="text-gray-600 mb-4">Issued by Infosys Springboard</p>
+                </div>
+                <!-- Add more project cards here -->
+
+            </div>
+    </section>
+    <!-- Extra-Curricular Activities Section -->
+    <section id="extracurricular" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Extra-Curricular Activities</h2>
+            <div class="max-w-3xl mx-auto">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <ul class="list-disc pl-6 space-y-4 text-gray-600">
+                        <li>Solved 500+ Data Structures and Algorithms coding questions on platforms like Leetcode, HackerRank, and Codechef</li>
+                        <li>Participated in various hackathons like SIH, CBIT COSC</li>
+                        <li>Participated and won in several Intercollege Throwball tournaments</li>
+                        <li>Secured the first prize in a scholarship test with over 2,000 participants, awarded a cash prize of ₹25,000</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Let's Connect</h2>
+            <div class="max-w-xl mx-auto">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex flex-col space-y-4">
+                        <div class="flex items-center space-x-4">
+                            <a href="mailto:Charithasri2410@gmail.com" class="text-gray-600 hover:text-blue-600">Charithasri2410@gmail.com</a>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <a href="https://www.linkedin.com/in/ycharithasri24?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="text-gray-600 hover:text-blue-600">LinkedIn Profile</a>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <a href="https://github.com/Charithasri-2410" class="text-gray-600 hover:text-blue-600">GitHub Profile</a>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <a href="https://www.hackerrank.com/profile/charithasri2410" class="text-gray-600 hover:text-blue-600">hacker Rank</a>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <a href="https://leetcode.com/u/charithasri2410/" class="text-gray-600 hover:text-blue-600">Leetcode</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400">© 2025 Charitha Sri. All rights reserved.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="https://www.linkedin.com/in/ycharithasri24?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="hover:text-blue-400 transition-colors">LinkedIn</a>
+                    <a href="https://github.com/Charithasri-2410" class="hover:text-blue-400 transition-colors">GitHub</a>
+                    <a href="mailto:Charithasri2410@gmail.com" class="hover:text-blue-400 transition-colors">Email</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+            const menuIcon = document.getElementById('menu-icon');
+            menuIcon.innerHTML = menu.classList.contains('hidden') ? '☰' : '×';
+        }
+    </script>
+</body>
+
+</html>
+
